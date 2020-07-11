@@ -1,0 +1,26 @@
+{:title "Janet Miniz"
+ :author "Calvin Rose"
+ :license "MIT"
+ :template "mdzdoc/main.html"
+ :order 0}
+---
+
+janet-miniz is a binding to the @link[miniz library]{https://github.com/richgel999/miniz}, which provides a zlib compatible API in a smaller package.
+
+## Source code
+
+@p{@link[https://github.com/bakpakin/janet-miniz]}
+
+## Install
+
+@codeblock```
+[sudo] jpm install https://github.com/bakpakin/janet-miniz.git
+```
+
+## Index
+
+@api-index[build/miniz]
+
+## Reference
+
+@api-docs[build/miniz]
