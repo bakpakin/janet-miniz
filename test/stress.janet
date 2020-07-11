@@ -10,6 +10,7 @@
 (loop [level :range [1 10]
        size :range [10 800010 32000]
        prefix :in ["" (string/repeat "abc" 20)]]
+  (def len (length prefix))
   (buffer/clear chunk-initial)
   (buffer/clear chunk-compressed)
   (buffer/clear chunk-decompressed)
@@ -17,8 +18,8 @@
   (buffer/push-string chunk-decompressed prefix)
   (math/rng-buffer rng size chunk-initial)
   (miniz/compress chunk-initial level chunk-compressed)
-  (miniz/decompress chunk-compressed chunk-decompressed)
-  (if (deep= chunk-initial chunk-decompressed)
+  (miniz/decompress (slice chunk-compressed len) chunk-decompressed)
+  (if (= (string chunk-initial) (string/slice chunk-decompressed len))
     (++ good-count)
     (array/push bad [(string chunk-initial) level])))
 
