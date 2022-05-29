@@ -1,6 +1,8 @@
 (declare-project
   :name "janet-miniz"
+  :description "Janet bindings to the miniz library."
   :author "calsrose@gmail.com"
+  :url "https://github.com/bakpakin/janet-miniz"
   :license "MIT")
 
 (declare-native
