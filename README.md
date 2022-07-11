@@ -1,6 +1,11 @@
 # Janet miniz bindings
 
-Bindings to the miniz library in Janet. Currently exposes in memory compression only.
+Bindings to the [miniz](https://github.com/richgel999/miniz) library in Janet. Currently
+exposes in memory compression only.
+
+## Install
+
+    [sudo] jpm install miniz
 
 ## Documentation
 
